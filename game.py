@@ -22,3 +22,4 @@ def rules():
     print('Spock vaporizes Rock')
 
 game_rules=rules()
+
