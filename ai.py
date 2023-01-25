@@ -1,3 +1,5 @@
-class AI:
-    def __init__(self) -> None:
-        pass
+from player_one import Player
+
+class AI(Player):
+    def __init__(self):
+        super().__init__()

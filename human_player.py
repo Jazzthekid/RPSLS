@@ -1,3 +1,4 @@
-class Human:
-    def __init__(self) -> None:
-        pass
+from player_one import Player
+class Human(Player):
+    def __init__(self):
+        super().__init__()
