@@ -14,6 +14,7 @@ class Game:
     def welcome(self):
         print('')
         print('Welcome to Rock, Paper, Scissors, Lizard, Spock')
+        time.sleep(.3)
 
     def rules(self):
         time.sleep(.5)
@@ -49,7 +50,7 @@ class Game:
         if user_choice == "1":
             p_one_name = input("What is player ones name? ")
             self.player_one = Human(p_one_name)
-            self.player_two = AI("Bob")
+            self.player_two = AI("E.D.I.T.H")
         if user_choice == "2":
             p_one_name = input("What is player ones name? ")
             self.player_one = Human(p_one_name)
