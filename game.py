@@ -47,7 +47,7 @@ class Game:
         print('')
         user_choice = input('Press 1 for single player or 2 for muli-player ')
         if user_choice == "1":
-            p_one_name = input("what is player ones name? ")
+            p_one_name = input("What is player ones name? ")
             self.player_one = Human(p_one_name)
             self.player_two = AI("Bob")
         if user_choice == "2":
@@ -67,7 +67,8 @@ class Game:
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
             if self.player_one.selection == self.player_two.selection:
-                print("its a tie, keep playing")
+                print("Its a tie, keep playing")
+                print('')
             elif self.player_one.selection == "Rock" and self.player_two.selection == "Scissors":
                 print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
                 self.player_one.score += 1 
