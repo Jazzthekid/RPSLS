@@ -10,6 +10,7 @@ class Game:
 
 
     def welcome(self):
+        print('')
         print('Welcome to Rock, Paper, Scissors, Lizard, Spock')
 
     def rules(self):
@@ -28,68 +29,73 @@ class Game:
 
 
     def choose_player(self):
-        user_choice = input('Press 1 for single player or 2 for muli-player')
+        print('')
+        user_choice = input('Press 1 for single player or 2 for muli-player ')
         if user_choice == "1":
             p_one_name = input("what is player ones name?")
             self.player_one = Human(p_one_name)
             self.player_two = AI("rumba")
         if user_choice == "2":
-            p_one_name = input("what is player ones name?")
+            p_one_name = input("What is player ones name? ")
             self.player_one = Human(p_one_name)
-            p_two_name = input("what is player ones name?")
+            print('')
+            p_two_name = input("What is player twos name? ")
             self.player_two = Human(p_two_name)
 
     def play_rounds(self):
         # while loop here but make sure you can get throgh an entire hand before trying to add this
         # loop while player one score is less than 2 and player two score is less than 2
-        self.player_one.choose_gesture()
-        self.player_two.choose_gesture()
-        if self.player_one.selection == self.player_two.selection:
-            print("its a tie, keep playing")
-        elif self.player_one.selection == "Rock" and self.player_two.selection == "Scissors":
-            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-            self.player_one.score += 1 
-        elif self.player_one.selection == "Scissors" and self.player_two == "Paper":
-             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-             self.player_one.score += 1 
-
-        elif self.player_one.selection == "Paper" and self.player_two == " Rock":
-             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-             self.player_one.score += 1 
-
-        elif self.player_one.selection == "Rock" and self.player_two.selection == "Lizard":
-             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-             self.player_one.score += 1 
-
-        elif self.player_one.selection == "Lizard" and self.player_two.selection == "Spock":
-             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-             self.player_one.score += 1
-
-        elif self.player_one == "Spock" and self.player_two.selection == "Scissors":
-             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-             self.player_one.score += 1   
-
-        elif self.player_one.selection == "Scissors" and self.player_two.selection == "Lizard":
-            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-            self.player_one.score += 1 
- 
-        elif self.player_one == "Lizard" and self.player_two.selection == "Paper":
-            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-            self.player_one.score += 1 
+        while self.player_one.score <2 and self.player_two.score <2:
         
-        elif self.player_one.selection == "Paper" and self.player_two.selection == "Spock":
-            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-            self.player_one.score += 1
-
-        elif self.player_one.selection == "Spock" and self.player_two.selection == "Rock":
-            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
-            self.player_one.score += 1
-
         
-        else:
-            print(f'{self.player_two.name} won this hand with {self.player_two.selection} vs {self.player_one.selection}')
-            self.player_two.score += 1
-        
+            self.player_one.choose_gesture()
+            self.player_two.choose_gesture()
+            if self.player_one.selection == self.player_two.selection:
+                print("its a tie, keep playing")
+            elif self.player_one.selection == "Rock" and self.player_two.selection == "Scissors":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+            elif self.player_one.selection == "Scissors" and self.player_two == "Paper":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+
+            elif self.player_one.selection == "Paper" and self.player_two == " Rock":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+
+            elif self.player_one.selection == "Rock" and self.player_two.selection == "Lizard":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+
+            elif self.player_one.selection == "Lizard" and self.player_two.selection == "Spock":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1
+
+            elif self.player_one == "Spock" and self.player_two.selection == "Scissors":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1   
+
+            elif self.player_one.selection == "Scissors" and self.player_two.selection == "Lizard":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+    
+            elif self.player_one == "Lizard" and self.player_two.selection == "Paper":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1 
+            
+            elif self.player_one.selection == "Paper" and self.player_two.selection == "Spock":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1
+
+            elif self.player_one.selection == "Spock" and self.player_two.selection == "Rock":
+                print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+                self.player_one.score += 1
+
+            
+            else:
+                print(f'{self.player_two.name} won this hand with {self.player_two.selection} vs {self.player_one.selection}')
+                self.player_two.score += 1
+            
     
     def run_game(self):
             self.welcome()
