@@ -1,4 +1,4 @@
-
+import time
 
 from player_one import Player
 
@@ -8,11 +8,15 @@ class Human(Player):
 
     def choose_gesture (self):
         print('Choose 1 for Rock')
-
+        time.sleep(.3)
         print('Choose 2 for Paper')
+        time.sleep(.3)
         print('Choose 3 for Scissors')
+        time.sleep(.3)
         print('Choose 4 for Lizard')
+        time.sleep(.3)
         print('Choose 5 for Spock')
+        time.sleep(.3)
         print('')
         choice = int(input("Choose your gesture "))
 
