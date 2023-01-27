@@ -1,3 +1,5 @@
+
+
 from player_one import Player
 
 class Human(Player):
@@ -6,6 +8,7 @@ class Human(Player):
 
     def choose_gesture (self):
         print('Choose 1 for Rock')
+
         print('Choose 2 for Paper')
         print('Choose 3 for Scissors')
         print('Choose 4 for Lizard')

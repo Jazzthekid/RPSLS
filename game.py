@@ -1,3 +1,5 @@
+import time
+
 from human_player import Human
 from ai import AI
 
@@ -14,25 +16,38 @@ class Game:
         print('Welcome to Rock, Paper, Scissors, Lizard, Spock')
 
     def rules(self):
+        time.sleep(.5)
         print('This game will be played in rounds! Whoever wins the best out of three wins the game! Each selection is paired with a number.')
+        time.sleep(.5)
         print('')
         print('Rock crushes Scissors')
+        time.sleep(.3)
         print('Scissors Cuts Paper')
+        time.sleep(.3)
         print('Paper Covers Rock')
+        time.sleep(.3)
         print('Rock crushes Lizard')
+        time.sleep(.3)
         print('Lizard poisons Spock')
+        time.sleep(.3)
         print('Spock smashes Scissors')
+        time.sleep(.3)
         print('Scissors decapitiates Lizard')
+        time.sleep(.3)
         print('Lizard eats paper')
+        time.sleep(.3)
         print('Paper disproves Spock')
+        time.sleep(.3)
         print('Spock vaporizes Rock')
+        time.sleep(.3)
+
 
 
     def choose_player(self):
         print('')
         user_choice = input('Press 1 for single player or 2 for muli-player ')
         if user_choice == "1":
-            p_one_name = input("what is player ones name?")
+            p_one_name = input("what is player ones name? ")
             self.player_one = Human(p_one_name)
             self.player_two = AI("Bob")
         if user_choice == "2":
