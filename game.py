@@ -53,7 +53,37 @@ class Game:
              print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
              self.player_one.score += 1 
 
-        elif self
+        elif self.player_one.selection == "Paper" and self.player_two == " Rock":
+             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+             self.player_one.score += 1 
+
+        elif self.player_one.selection == "Rock" and self.player_two.selection == "Lizard":
+             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+             self.player_one.score += 1 
+
+        elif self.player_one.selection == "Lizard" and self.player_two.selection == "Spock":
+             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+             self.player_one.score += 1
+
+        elif self.player_one == "Spock" and self.player_two.selection == "Scissors":
+             print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+             self.player_one.score += 1   
+
+        elif self.player_one.selection == "Scissors" and self.player_two.selection == "Lizard":
+            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+            self.player_one.score += 1 
+ 
+        elif self.player_one == "Lizard" and self.player_two.selection == "Paper":
+            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+            self.player_one.score += 1 
+        
+        elif self.player_one.selection == "Paper" and self.player_two.selection == "Spock":
+            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+            self.player_one.score += 1
+
+        elif self.player_one.selection == "Spock" and self.player_two.selection == "Rock":
+            print(f'{self.player_one.name} won this hand with {self.player_one.selection} vs {self.player_two.selection}')
+            self.player_one.score += 1
 
         
         else:
